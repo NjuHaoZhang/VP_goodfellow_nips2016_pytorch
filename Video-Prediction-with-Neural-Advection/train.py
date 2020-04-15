@@ -1,7 +1,17 @@
+'''
+@Author: haozhang
+@Date: 2020-04-15 00:35:05
+@LastEditTime: 2020-04-15 22:41:48
+@LastEditors: Please set LastEditors
+@Description: In User Settings Edit
+@FilePath: \VP_goodfellow_nips2016_pytorch\Video-Prediction-with-Neural-Advection\train.py
+'''
+
 import sys 
 sys.path.append('.')
+
 import tensorflow as tf
-from tensorflow.compat import v1 as v1 
+from tensorflow.compat import v1 as v1
 import time
 import math
 import os
@@ -18,7 +28,7 @@ if __name__ == "__main__":
 
     train_dataset = create_dataset(opt, mode="train", init="one_shot")          # create train and val dataset
     train_handle = train_dataset.get_item()         
-    val_dataset = create_dataset(opt, mode="val", init="initialize")            
+    val_dataset = create_dataset(opt, mode="val", init="initialize")             
     val_handle = val_dataset.get_item()
     opt.steps_per_epoch = int(math.ceil(train_dataset.len() / opt.batch_size))
     opt.max_steps = opt.steps_per_epoch * opt.max_epoch
