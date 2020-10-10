@@ -11,7 +11,7 @@ Unsupervised Learning for Physical Interaction through Video Prediction (NeuraIP
 
 ### 3. Testing on saved models
 
-### 4. Training from scratch (here we use ped2 and avenue datasets for examples)
+### 4. Training from scratch (here we use ucf101 for examples)
 
 ### Notes
 
